@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoTodo - Tu Auto con Todo Incluido</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --accent: #ef4444;
+            --dark: #1f2937;
+            --light: #f3f4f6;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        header {
+            background: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4rem 5%;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        .hero-text h1 {
+            font-size: 2.8rem;
+            color: var(--primary);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #4b5563;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #dc2626;
+        }
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+        }
+        .features {
+            padding: 4rem 5%;
+            text-align: center;
+        }
+        .features h2 {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .card {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card svg {
+            margin-bottom: 1rem;
+        }
+        .card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+        .conversion-section {
+            background: var(--primary);
+            color: white;
+            padding: 4rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .form-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        .form-info h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+        .form-container {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+            font-weight: 500;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .hero-text h1 { font-size: 2rem; }
+            .conversion-section { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">🚗 AutoTodo</div>
+        <a href="#contacto" class="btn">Cotizar Ahora</a>
+    </header>
+
+    <!-- Sección Principal (Hero) -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Llévate tu próximo auto con todo incluido</h1>
+            <p>Olvídate del papeleo, el seguro y las vueltas. Te entregamos las llaves con patente lista, cobertura total y el primer año de mantenimiento bonificado. Tú solo ocúpate de manejar.</p>
+            <a href="#contacto" class="btn">Ver Catálogo</a>
+        </div>
+        <div class="hero-image">
+            <!-- Imagen simple de auto en SVG -->
+            <svg width="100%" height="250" viewBox="0 0 400 200" xmlns="http://w3.org">
+                <rect x="10" y="120" width="380" height="40" fill="#94a3b8" rx="10"/>
+                <path d="M60,130 L100,70 L280,70 L340,130 Z" fill="#1e3a8a"/>
+                <rect x="40" y="110" width="320" height="40" fill="#3b82f6" rx="5"/>
+                <polygon points="105,75 170,75 170,105 75,105" fill="#cbd5e1"/>
+                <polygon points="185,75 275,75 295,105 185,105" fill="#cbd5e1"/>
+                <circle cx="100" cy="150" r="30" fill="#1e2937"/>
+                <circle cx="100" cy="150" r="12" fill="#94a3b8"/>
+                <circle cx="300" cy="150" r="30" fill="#1e2937"/>
+                <circle cx="300" cy="150" r="12" fill="#94a3b8"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Beneficios (Todo Incluido) -->
+    <section class="features">
+        <h2>¿Qué incluye nuestro servicio?</h2>
+        <div class="grid">
+            <div class="card">
+                <!-- Icono Documentos -->
+                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                <h3>Trámites y Patente</h3>
+                <p>Gestión de transferencia y patentamiento al 100% sin costos ocultos.</p>
+            </div>
+            <div class="card">
+                <!-- Icono Escudo -->
+                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <h3>Seguro de Cobertura Total</h3>
+                <p>Maneja protegido desde el primer segundo con las mejores aseguradoras.</p>
+            </div>
+            <div class="card">
+                <!-- Icono Llave -->
+                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path></svg>
+                <h3>Garantía y Service</h3>
+                <p>Primeros dos mantenimientos programados completamente gratis en talleres oficiales.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Conversión -->
+    <section class="conversion-section" id="contacto">
+        <div class="form-info">
+            <h2>Agenda tu prueba de manejo hoy</h2>
+            <p>Completa tus datos y un asesor te contactará en menos de 15 minutos para diseñar un plan a tu medida con financiación exclusiva.</p>
+        </div>
+        <div class="form-container">
+            <form onsubmit="alert('¡Gracias! Nos comunicaremos contigo a la brevedad.'); return false;">
+                <div class="form-group">
+                    <label Bureau for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" required placeholder="Ej. Juan Pérez">
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" required placeholder="Ej. +54 9 11 1234 5678">
+                </div>
+                <div class="form-group">
+                    <label for="modelo">Modelo de Interés</label>
+                    <select id="modelo">
+                        <option>SUV Familiar (Todo Incluido)</option>
+                        <option>Sedán Confort (Todo Incluido)</option>
+                        <option>Hatchback Urbano (Todo Incluido)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Quiero mi asesoría gratis</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 AutoTodo S.A. - Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
