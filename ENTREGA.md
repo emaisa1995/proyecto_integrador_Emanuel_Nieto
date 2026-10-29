@@ -8,7 +8,7 @@
 ## Enlaces
 - Repositorio de GitHub: https://github.com/emaisa1995/proyecto_integrador_Emanuel_Nieto
 - Issue: https://github.com/emaisa1995/proyecto_integrador_Emanuel_Nieto/issues/1#issue-6102232300
-- Pull request: [Pega aquí la URL de tu Pull Request del Paso 10]
+- Pull request: https://github.com/emaisa1995/proyecto_integrador_Emanuel_Nieto/pull/2
 
 ## Comandos principales utilizados
 - git init
