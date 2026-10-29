@@ -6,7 +6,7 @@
 - Fecha de entrega: 28 de octubre de 2026
 
 ## Enlaces
-- Repositorio de GitHub: [Pega aquí la URL principal de tu repositorio de GitHub]
+- Repositorio de GitHub: https://github.com/emaisa1995/proyecto_integrador_Emanuel_Nieto
 - Issue: [Pega aquí la URL de tu Issue del Paso 7]
 - Pull request: [Pega aquí la URL de tu Pull Request del Paso 10]
 
