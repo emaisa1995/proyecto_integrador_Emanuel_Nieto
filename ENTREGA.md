@@ -28,6 +28,7 @@
 Cree un repositorio local para estructurar los archivos de mi landing page. Organicé las zonas del proyecto enviando los componentes al Staging Area para luego registrar los cambios mediante los commit. 
 
 ## Dificultades encontradas
+Realize cambios en ambas ramas, y me salto un conflicto, en el cual en visual studio code me mostro cuando estaba por realizar el merge, las lineas con los cambios diferentes, seleccione el de la rama corecciones_html, y ahi ya pude realizar los cambios correctamente
 
 ## Reflexión final
 A través de este curso comprendí que Git y GitHub es una herramienta muy importante para documentar archivos y tener ordenar de la mejor manera nuestro trabajo, y tener claro los cambios, versiones que se hayan realizado.
